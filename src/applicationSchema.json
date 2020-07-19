@@ -1,0 +1,31 @@
+{
+    "applicationRoute": [
+        {
+            "path": "/dashboard",
+            "component": "",
+            "name": "Employee Basic Details"
+        },
+        {
+            "path": "/primary_details",
+            "component": "",
+            "name": "Employee Primary Details"
+        },
+        {
+            "path": "/contact_details",
+            "component": "",
+            "name": "Contact Details"
+        },
+        {
+            "path": "/details_preview",
+            "component": "",
+            "name": "Details Preview"
+        },
+		{
+			"redirect": true,
+			"path": "/",
+			"to": "",
+			"name": "",
+			"component": ""
+		}
+    ]
+}

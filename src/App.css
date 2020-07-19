@@ -27,7 +27,16 @@
 .App-link {
   color: #61dafb;
 }
-
+.container-margin{
+  margin-top:100px;
+}
+.danger{
+vertical-align: super;
+color: red;
+}
+.preview{
+  width: 500px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
