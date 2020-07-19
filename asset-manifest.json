@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Redux-Form-Basics/static/css/main.2e529cc7.chunk.css",
+    "main.js": "/Redux-Form-Basics/static/js/main.09240868.chunk.js",
+    "main.js.map": "/Redux-Form-Basics/static/js/main.09240868.chunk.js.map",
+    "runtime-main.js": "/Redux-Form-Basics/static/js/runtime-main.83e11955.js",
+    "runtime-main.js.map": "/Redux-Form-Basics/static/js/runtime-main.83e11955.js.map",
+    "static/js/2.8a311058.chunk.js": "/Redux-Form-Basics/static/js/2.8a311058.chunk.js",
+    "static/js/2.8a311058.chunk.js.map": "/Redux-Form-Basics/static/js/2.8a311058.chunk.js.map",
+    "index.html": "/Redux-Form-Basics/index.html",
+    "precache-manifest.66dab7c6f3e295c00b0af34d3444bfde.js": "/Redux-Form-Basics/precache-manifest.66dab7c6f3e295c00b0af34d3444bfde.js",
+    "service-worker.js": "/Redux-Form-Basics/service-worker.js",
+    "static/css/main.2e529cc7.chunk.css.map": "/Redux-Form-Basics/static/css/main.2e529cc7.chunk.css.map",
+    "static/js/2.8a311058.chunk.js.LICENSE.txt": "/Redux-Form-Basics/static/js/2.8a311058.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83e11955.js",
+    "static/js/2.8a311058.chunk.js",
+    "static/css/main.2e529cc7.chunk.css",
+    "static/js/main.09240868.chunk.js"
+  ]
+}
