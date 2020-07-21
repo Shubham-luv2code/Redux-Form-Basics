@@ -1,16 +1,10 @@
 import React from 'react'
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
-    <div className='row'>
-        <div className='col-md-3'>
-            <strong><label>{label}:</label></strong>
-        </div>
-        <div className='col-md-9'>
-            <div>
-                <input {...input} placeholder={label} type={type}/>
-                {touched && error && <span className='danger'>{`*${error}`}</span>}
-            </div>
-        </div>
+    <div className='col-md-12 row text-center'>
+        <label className='col-md-3 font-weight-bold'>{label}:</label>
+        <input className='col-md-6 mb-3' {...input} placeholder={label} type={type} />
+        {touched && error && <span className='danger'>{`*${error}`}</span>}
     </div>
 )
 

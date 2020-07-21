@@ -6,11 +6,9 @@ import * as serviceWorker from './serviceWorker';
 
 import { createStore, combineReducers,applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import { reducer as formReducer } from 'redux-form';
 import { BrowserRouter } from 'react-router-dom';
-const rootReducer = combineReducers({
-  form: formReducer,
-});
+import rootReducer from './Store/Reducer/rootReducer';
+import thunk from 'redux-thunk';
 
 const logger = store => next => action => {
   console.group(action.type)
@@ -23,7 +21,7 @@ const logger = store => next => action => {
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(logger)
+  applyMiddleware(thunk,logger)
   );
 
 ReactDOM.render(

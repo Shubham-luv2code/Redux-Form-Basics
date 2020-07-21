@@ -20,7 +20,10 @@ const validate = values => {
       errors.sex = 'Required'
     }
     if (!values.age) {
-      errors.age   = 'Required'
+      errors.age = 'Required'
+    }
+    else if(Number(values.age) < 18 || Number(values.age) > 60){
+      errors.age = 'Valid Age criteria is 18-60 years'
     }
     if (!values.acknowledgement) {
       errors.acknowledgement   = 'Please accept the declaration'

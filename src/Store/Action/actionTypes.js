@@ -1,0 +1,1 @@
+export const GET_EMP_DETAILS = 'GET_EMP_DETAILS';

@@ -7,7 +7,7 @@ const renderError = ({ meta: { touched, error } }) =>
 const PrimaryDetailsForm = props => {
   const { handleSubmit } = props
   return (
-    <div className='container container-margin'>
+    <div className='container-fluid container-margin'>
       <h4>Employee Primary Details</h4>
       <form onSubmit={handleSubmit}>
         <Field
@@ -25,15 +25,15 @@ const PrimaryDetailsForm = props => {
         />
         <Field
           name="age"
-          type="text"
+          type="number"
           component={renderField}
           label="Age"
           placeHolder="Enter Age"
         />
 
         <div className='col-md-12 row'>
-          <label className='col-md-3'><strong>Sex:</strong></label>
-          <div className='col-md-9'>
+          <label className='col-md-3'><strong>Gender:</strong></label>
+          <div>
             <label>
               <Field
                 name="sex"

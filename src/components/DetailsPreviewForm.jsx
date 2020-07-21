@@ -14,57 +14,30 @@ const DetailsPreviewForm = props => {
     <div className='container container-margin'>
       <h4>Preview Details</h4>
       <form onSubmit={handleSubmit}>
-        <div>
-          <div className='row'>
-            <div className='col-md-3'>
-              <label><strong>First Name:</strong></label>
-            </div>
-            <div className='col-md-9'>
-              <Field className='preview' disabled name="firstName" component='input' />
-            </div>
+          <div className='col-md-12 row'>
+              <label className='col-md-3 font-weight-bold'>First Name:</label>
+              <Field className='col-md-9' disabled name="firstName" component='input' />
           </div>
-        </div>
-        <div className='row'>
-          <div className='col-md-3'>
-            <label><strong>Last Name:</strong></label>
+          <div className='col-md-12 row'>
+              <label className='col-md-3 font-weight-bold'>Last Name:</label>
+              <Field className='col-md-9' disabled name="lastName" component='input' />
           </div>
-          <div className='col-md-9'>
-            <Field className='preview' className='preview' disabled name="lastName" component='input'/>
+          <div className='col-md-12 row'>
+              <label className='col-md-3 font-weight-bold'>Age:</label>
+              <Field className='col-md-9'  disabled name="age" component='input' />
           </div>
-        </div>
-        <div className='row'>
-          <div className='col-md-3'>
-            <label><strong>Sex:</strong></label>
+          <div className='col-md-12 row'>
+              <label className='col-md-3 font-weight-bold'>Gender:</label>
+              <Field className='col-md-9' disabled name="sex" component='input' />
           </div>
-          <div className='col-md-9' >
-            <Field className='preview' disabled name="sex" component='input' />
+          <div className='col-md-12 row'>
+              <label className='col-md-3 font-weight-bold'>Email:</label>
+              <Field className='col-md-9' disabled name="email" component='input' />
           </div>
-        </div>
-        <div className='row'>
-          <div className='col-md-3'>
-            <label><strong>Email:</strong></label>
+          <div className='col-md-12 row'>
+              <label className='col-md-3 font-weight-bold'>Mobile No:</label>
+              <Field className='col-md-9' disabled name="mobileNum" component='input' />
           </div>
-          <div className='col-md-9' >
-            <Field className='preview' disabled name="email" component='input'/>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-md-3'>
-            <label><strong>Mobile Number:</strong></label>
-          </div>
-          <div className='col-md-9' >
-            <Field className='preview' disabled name="mobileNum" component='input' />
-          </div>
-        </div>
-
-        <div className='row'>
-          <div className='col-md-3'>
-            <label><strong>Age:</strong></label>
-          </div>
-          <div className='col-md-9' >
-            <Field className='preview' disabled name="age" component='input'/>
-          </div>
-        </div>
 
         <div className='col-md-12 container-margin'>
           <label htmlFor="employed">
