@@ -37,6 +37,18 @@ color: red;
 .preview{
   width: 500px;
 }
+.custom-backdrop{
+  background: none repeat scroll 0 0 lightgrey;
+  position: fixed;
+  opacity: 0.5;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  height: -webkit-fill-available;
+  width: 105%;
+  left: 0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

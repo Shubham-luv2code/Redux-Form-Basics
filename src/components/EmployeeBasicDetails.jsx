@@ -6,7 +6,7 @@ import DetailsPreviewForm from './DetailsPreviewForm';
 import {getEmpActionCreator} from './../Store/Action/actionCreator';
 import { connect } from 'react-redux';
 import { debounce } from 'lodash'
-
+import Loader from './../Loader/Loader'
 class EmployeeBasicDetails extends React.Component {
     constructor(props) {
         super(props);
@@ -18,7 +18,6 @@ class EmployeeBasicDetails extends React.Component {
         this.state = {
             pageNo: 1,
             empId: '',
-            validEmp: false,
             isValidated: false
         }
     }
@@ -51,25 +50,19 @@ class EmployeeBasicDetails extends React.Component {
     async validateEmpId(empId){
         if(empId !== ''){
             await Promise.allSettled([this.props.getEmpActionCreator(empId)]).then((data) => {
-                console.log(this.props.empData,'empData')
                 this.setState({isValidated:true});
-                if(Object.keys(this.props.empData).length !== 0){
-                    this.setState({validEmp: true})
-                }
-                else{
-                    this.setState({validEmp: false})
-                }
             })
         }
         else{
-            this.setState({validEmp: false,isValidated:false})
+            this.setState({isValidated:false})
         }
         
     }
     render() {
-        const { pageNo,empId,validEmp,isValidated } = this.state;
+        const { pageNo,empId,isValidated } = this.state;
         return (
             <React.Fragment>
+                <Loader show={this.props.isLoading}/>
                 <div className='container-fluid container-margin'>
                 <div className="card">
                 <div className="card-body">
@@ -78,13 +71,13 @@ class EmployeeBasicDetails extends React.Component {
                     <label htmlFor='empId' className='col-md-3 font-weight-bold' >Employee ID:</label>
                     <input name='empId' className='col-md-3' disabled={pageNo === 1 ? false : true} placeholder='Enter User ID' onChange={(e)=>{this.enterEmpId(e)}}/>
                     {
-                        isValidated && <span> {validEmp ? <i className='fa fa-check-circle col-md-3'>&nbsp;Valid Enployee</i>: <i className='fa fa-times-circle col-md-3'>&nbsp;Sorry, Inalid Enployee ID entered!</i>}</span>
+                        isValidated && <span> {this.props.validEmp ? <i className='fa fa-check-circle col-md-3'>&nbsp;Valid Enployee</i>: <i className='fa fa-times-circle col-md-3'>&nbsp;Sorry, Inalid Enployee ID entered!</i>}</span>
                     }<br/>
                     <small ><strong>Tip:</strong> Valid Employee ID is in range of 1-10</small>
 
                 </div>
                 <div>
-                    {pageNo === 1 && empId !== '' && validEmp && <PrimaryDetailsForm onSubmit={this.nextPage} />}
+                    {pageNo === 1 && empId !== '' && this.props.validEmp && <PrimaryDetailsForm onSubmit={this.nextPage} />}
                     {pageNo === 2 && (
                         <ContactDetailsForm
                             previousPage={this.previousPage}
@@ -108,7 +101,9 @@ class EmployeeBasicDetails extends React.Component {
 const mapStateToProps = state => {
 	console.log(state.reducerReturn.empData,"state.reducerReturn.empData")
 	return {
-		empData: state.reducerReturn.empData
+        empData: state.reducerReturn.empData,
+        validEmp: state.reducerReturn.validEmp,
+        isLoading: state.reducerReturn.isLoading
 	 }
 }
 
