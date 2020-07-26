@@ -5,6 +5,7 @@ import ContactDetailsForm from './ContactDetailsForm';
 import DetailsPreviewForm from './DetailsPreviewForm';
 import {getEmpActionCreator} from './../Store/Action/actionCreator';
 import { connect } from 'react-redux';
+import { debounce } from 'lodash'
 
 class EmployeeBasicDetails extends React.Component {
     constructor(props) {
@@ -35,22 +36,34 @@ class EmployeeBasicDetails extends React.Component {
     showSubmittedDetails(){
         console.log(this.props,'props')
     }
-    enterEmpId = (e) =>{
-        if(e.target.name === 'empId'){
-            this.setState({empId: e.target.value});
+    enterEmpId = (e) => {
+        e.persist();
+        
+        if (!this.debouncedFn) {
+          this.debouncedFn =  debounce(() => {
+            this.setState({empId: e.target.value})
+             let empId = e.target.value;
+             this.validateEmpId(empId)
+          }, 500);
         }
+        this.debouncedFn();
     }
-    async validateEmpId(){
-        await Promise.allSettled([this.props.getEmpActionCreator(this.state.empId)]).then((data) => {
-            console.log(this.props.empData,'empData')
-            this.setState({isValidated:true});
-            if(Object.keys(this.props.empData).length !== 0){
-                this.setState({validEmp: true})
-            }
-            else{
-                this.setState({validEmp: false})
-            }
-        })
+    async validateEmpId(empId){
+        if(empId !== ''){
+            await Promise.allSettled([this.props.getEmpActionCreator(empId)]).then((data) => {
+                console.log(this.props.empData,'empData')
+                this.setState({isValidated:true});
+                if(Object.keys(this.props.empData).length !== 0){
+                    this.setState({validEmp: true})
+                }
+                else{
+                    this.setState({validEmp: false})
+                }
+            })
+        }
+        else{
+            this.setState({validEmp: false,isValidated:false})
+        }
         
     }
     render() {
@@ -63,7 +76,7 @@ class EmployeeBasicDetails extends React.Component {
 
                 <div className='col-md-12 text-center'>
                     <label htmlFor='empId' className='col-md-3 font-weight-bold' >Employee ID:</label>
-                    <input name='empId' className='col-md-3' disabled={pageNo === 1 ? false : true} placeholder='Enter User ID' onChange={(e)=>{this.enterEmpId(e)}} onBlur={this.validateEmpId}/>
+                    <input name='empId' className='col-md-3' disabled={pageNo === 1 ? false : true} placeholder='Enter User ID' onChange={(e)=>{this.enterEmpId(e)}}/>
                     {
                         isValidated && <span> {validEmp ? <i className='fa fa-check-circle col-md-3'>&nbsp;Valid Enployee</i>: <i className='fa fa-times-circle col-md-3'>&nbsp;Sorry, Inalid Enployee ID entered!</i>}</span>
                     }<br/>
