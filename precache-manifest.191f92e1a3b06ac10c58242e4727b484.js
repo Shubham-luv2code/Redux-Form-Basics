@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8484dd4a98711271db921a2fbd4fe6c6",
+    "revision": "b6c5d9cf495c7d0b3d92410903e0c88e",
     "url": "/Redux-Form-Basics/index.html"
   },
   {
-    "revision": "89fc25bb2a54d3791702",
+    "revision": "6303bcd5f47db8c91d94",
     "url": "/Redux-Form-Basics/static/css/main.befa2db2.chunk.css"
   },
   {
-    "revision": "daf04f9ddbcf4dfe719a",
-    "url": "/Redux-Form-Basics/static/js/2.5f146341.chunk.js"
+    "revision": "4539549e9f64ec4b3d6c",
+    "url": "/Redux-Form-Basics/static/js/2.3179b1aa.chunk.js"
   },
   {
     "revision": "117d65892edc8adcd29d4a0d57b5a80a",
-    "url": "/Redux-Form-Basics/static/js/2.5f146341.chunk.js.LICENSE.txt"
+    "url": "/Redux-Form-Basics/static/js/2.3179b1aa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "89fc25bb2a54d3791702",
-    "url": "/Redux-Form-Basics/static/js/main.9e609c03.chunk.js"
+    "revision": "6303bcd5f47db8c91d94",
+    "url": "/Redux-Form-Basics/static/js/main.49a5c3cd.chunk.js"
   },
   {
     "revision": "e8c206679bab92bf6f95",

@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Redux-Form-Basics/static/css/main.befa2db2.chunk.css",
-    "main.js": "/Redux-Form-Basics/static/js/main.9e609c03.chunk.js",
-    "main.js.map": "/Redux-Form-Basics/static/js/main.9e609c03.chunk.js.map",
+    "main.js": "/Redux-Form-Basics/static/js/main.49a5c3cd.chunk.js",
+    "main.js.map": "/Redux-Form-Basics/static/js/main.49a5c3cd.chunk.js.map",
     "runtime-main.js": "/Redux-Form-Basics/static/js/runtime-main.83e11955.js",
     "runtime-main.js.map": "/Redux-Form-Basics/static/js/runtime-main.83e11955.js.map",
-    "static/js/2.5f146341.chunk.js": "/Redux-Form-Basics/static/js/2.5f146341.chunk.js",
-    "static/js/2.5f146341.chunk.js.map": "/Redux-Form-Basics/static/js/2.5f146341.chunk.js.map",
+    "static/js/2.3179b1aa.chunk.js": "/Redux-Form-Basics/static/js/2.3179b1aa.chunk.js",
+    "static/js/2.3179b1aa.chunk.js.map": "/Redux-Form-Basics/static/js/2.3179b1aa.chunk.js.map",
     "index.html": "/Redux-Form-Basics/index.html",
-    "precache-manifest.3d1018dc7cb4cdc6545382793f4894f5.js": "/Redux-Form-Basics/precache-manifest.3d1018dc7cb4cdc6545382793f4894f5.js",
+    "precache-manifest.191f92e1a3b06ac10c58242e4727b484.js": "/Redux-Form-Basics/precache-manifest.191f92e1a3b06ac10c58242e4727b484.js",
     "service-worker.js": "/Redux-Form-Basics/service-worker.js",
     "static/css/main.befa2db2.chunk.css.map": "/Redux-Form-Basics/static/css/main.befa2db2.chunk.css.map",
-    "static/js/2.5f146341.chunk.js.LICENSE.txt": "/Redux-Form-Basics/static/js/2.5f146341.chunk.js.LICENSE.txt"
+    "static/js/2.3179b1aa.chunk.js.LICENSE.txt": "/Redux-Form-Basics/static/js/2.3179b1aa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.83e11955.js",
-    "static/js/2.5f146341.chunk.js",
+    "static/js/2.3179b1aa.chunk.js",
     "static/css/main.befa2db2.chunk.css",
-    "static/js/main.9e609c03.chunk.js"
+    "static/js/main.49a5c3cd.chunk.js"
   ]
 }
