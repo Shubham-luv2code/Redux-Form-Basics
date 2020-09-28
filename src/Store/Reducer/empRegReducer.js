@@ -1,4 +1,4 @@
-import {GET_EMP_DETAILS,ERROR_FETCH,LOADER_ACTION_TYPE} from './../Action/actionTypes'
+import {GET_EMP_DETAILS,ERROR_FETCH,LOADER_ACTION_TYPE,USER_GROUP_TYPE} from './../Action/actionTypes'
 
 const initState = {
     empData: {},
@@ -10,12 +10,19 @@ const empDetailsReducer = (state = initState, action) => {
             ...state,
             empData : action.empData,
             validEmp: action.validEmp,
+            allowedAction: action.allowedAction
         }
         case ERROR_FETCH:
         return state =  {
             ...state,
             empData : action.empData,
-            validEmp: action.validEmp,
+            validEmp: action.validEmp
+        }
+        case USER_GROUP_TYPE:
+        return state =  {
+            ...state,
+            userGroupData : action.userGroupData,
+            allowedAction: action.allowedAction,
         }
         case LOADER_ACTION_TYPE:
         return state =  {

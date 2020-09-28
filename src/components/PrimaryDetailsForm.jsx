@@ -61,7 +61,7 @@ const PrimaryDetailsForm = props => {
               className="form-group row float-sm-right"
             >
               <li className="next">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" disabled={!props.allowedAction} className="btn btn-primary">
                   Next
         </button>
               </li>
